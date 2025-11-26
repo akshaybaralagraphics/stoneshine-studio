@@ -1,103 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>StoneShine Studio</title>
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f6f6f6;
-}
-header{
-  background:#000;
-  color:#fff;
-  padding:20px;
-  text-align:center;
-  font-size:28px;
-  font-weight:bold;
-}
-.section{
-  padding:40px 20px;
-  max-width:1200px;
-  margin:auto;
-}
-.section h2{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:30px;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:20px;
-}
-.gallery img{
-  width:100%;
-  border-radius:10px;
-  background:#ddd;
-}
-.button{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 24px;
-  background:black;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:16px;
-}
-footer{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoneShine Studio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f8f8;
+            text-align: center;
+        }
+
+        header {
+            background: black;
+            padding: 18px;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 26px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 30px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 30px auto;
+            max-width: 1100px;
+        }
+
+        .card {
+            background: white;
+            width: 240px;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+        }
+    </style>
+
 </head>
 <body>
+
 <header>
-  StoneShine Studio
+    <h1>StoneShine Studio</h1>
 </header>
 
-<!-- Jewellery Photo Editing -->
-<section class="section">
-  <h2>Jewellery Photo Editing</h2>
-  <div class="gallery">
-    <img src="images/rings.png" alt="Rings" />
-    <img src="images/necklace.png" alt="Necklace" />
-    <img src="images/earrings.png" alt="Earrings" />
-    <img src="images/bangles.png" alt="Bangles" />
-  </div>
-  <a class="button" href="#">View More</a>
-</section>
+
+<!-- Jewellery Editing -->
+<h2>Jewellery Photo Editing</h2>
+<div class="gallery">
+    <div class="card">
+        <img src="images/rings.png">
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="images/necklace.png">
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="images/earrings.png">
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="images/bangles.png">
+        <button class="btn">View More</button>
+    </div>
+</div>
+
 
 <!-- Background Replacement -->
-<section class="section">
-  <h2>Background Replacement</h2>
-  <div class="gallery">
-    <img src="images/placeholder.png" alt="Placeholder" />
-    <img src="images/placeholder.png" alt="Placeholder" />
-    <img src="images/placeholder.png" alt="Placeholder" />
-  </div>
-  <a class="button" href="#">View More</a>
-</section>
+<h2>Background Replacement</h2>
+<div class="gallery">
+    <div class="card">
+        <img src="images/placeholder.png">
+        <button class="btn">View More</button>
+    </div>
+    <div class="card">
+        <img src="images/placeholder.png">
+        <button class="btn">View More</button>
+    </div>
+    <div class="card">
+        <img src="images/placeholder.png">
+        <button class="btn">View More</button>
+    </div>
+</div>
 
-<!-- Meta Ads / Reels Editing -->
-<section class="section">
-  <h2>Reels & Meta Ads Editing</h2>
-  <div class="gallery">
-    <img src="images/placeholder.png" alt="Placeholder" />
-    <img src="images/placeholder.png" alt="Placeholder" />
-    <img src="images/placeholder.png" alt="Placeholder" />
-  </div>
-  <a class="button" href="#">View More</a>
-</section>
 
-<footer>
-  © 2025 StoneShine Studio. All Rights Reserved.
-</footer>
+<!-- Reels Editing -->
+<h2>Reels & Meta Ads Editing</h2>
+<div class="gallery">
+    <div class="card">
+        <img src="images/placeholder.png">
+        <button class="btn">View More</button>
+    </div>
+</div>
+
+
+<!-- Instagram Content -->
+<h2>Instagram Content Designing</h2>
+<div class="gallery">
+    <div class="card">
+        <img src="images/placeholder.png">
+        <button class="btn">View More</button>
+    </div>
+</div>
+
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" 
+   href="https://wa.me/916376741561?text=Hello%20StoneShine%20Studio">
+   WhatsApp
+</a>
+
 </body>
 </html>
