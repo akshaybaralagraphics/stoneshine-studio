@@ -1,176 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><!-- Primary Meta Tags -->
-<title>StoneShine Studio | Gold, Diamond & Polki Jewellery Editing Specialist</title>
-<meta name="description" content="Professional jewellery photo editing for Gold, Diamond, Polki & Color Stone jewellery. Premium retouching, shine enhancement, reels, ads & creative designs.">
-<meta name="keywords" content="jewellery editing, gold jewellery editing, diamond jewellery editing, polki jewellery editing, gemstone editing, jewelry retouching, photo editing for jewellery, StoneShine Studio, Akshay Barala">
-<meta name="author" content="StoneShine Studio">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StoneShine Studio</title>
 
-<!-- Mobile Responsive -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
 
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="StoneShine Studio | Premium Jewellery Editing Service">
-<meta property="og:description" content="Expert editing for Gold, Diamond, Polki, and Color Stone jewellery. Boost your brand with premium visuals.">
-<meta property="og:image" content="https://akshaybaralagraphics.github.io/stoneshine-studio/assets/banner.jpg">
-<meta property="og:url" content="https://akshaybaralagraphics.github.io/stoneshine-studio/">
-<meta property="og:type" content="website">
+    h1, h2 {
+      color: #d4af37;
+      text-align: center;
+    }
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="StoneShine Studio | Jewellery Editing Specialist">
-<meta name="twitter:description" content="High-quality jewellery photo editing for brands & retailers. Gold, Diamond, Polki, Color Stone.">
-<meta name="twitter:image" content="https://akshaybaralagraphics.github.io/stoneshine-studio/assets/banner.jpg">
+    /* SERVICES SECTION */
+    #services {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
 
-<!-- Favicon -->
-<link rel="icon" href="https://akshaybaralagraphics.github.io/stoneshine-studio/assets/favicon.png" type="image/png">
+    .service-item {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>StoneShine Studio — Jewellery Editing</title>
-<style>
-  :root{ --bg:#0b0b0b; --gold:#c59b4b; --muted:#faf7f2; --card:#111; }
-  body{margin:0;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;color:var(--muted);background:linear-gradient(180deg,#050505 0%, #0f0f0f 100%);}
-  .container{max-width:1100px;margin:0 auto;padding:36px;}
-  header{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.04);}
-  .brand{display:flex;align-items:center;gap:16px}
-  .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#f3e0b4);display:flex;align-items:center;justify-content:center;color:#111;font-weight:700;font-size:20px}
-  h1{margin:0;font-family:Playfair Display, serif;font-size:22px;color:var(--muted)}
-  header p{margin:0;color:rgba(250,247,242,0.75)}
-  .cta a{background:var(--gold);color:#071018;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
-  .hero{display:flex;gap:40px;align-items:center;padding:48px 0}
-  .hero-left{flex:1}
-  .hero-right{flex:1;display:flex;justify-content:center}
-  .hero h2{font-family:Playfair Display,serif;font-size:40px;margin:0 0 12px;color:var(--gold)}
-  .hero p{margin:0 0 18px;color:rgba(250,247,242,0.85);font-size:16px;max-width:560px}
-  .buttons{display:flex;gap:12px}
-  .btn-secondary{border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:8px;color:var(--muted);text-decoration:none}
-  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:36px 0}
-  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .card h3{margin:0 0 8px;color:var(--gold);font-family:Playfair Display, serif}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:28px}
-  .gallery img{width:100%;height:auto;border-radius:10px;display:block;object-fit:cover;border:1px solid rgba(255,255,255,0.03)}
-  .why{display:flex;gap:18px;align-items:stretch;margin:36px 0}
-  .why .text{flex:1}
-  .contact{background:linear-gradient(180deg, rgba(197,155,75,0.06), rgba(197,155,75,0.03));padding:20px;border-radius:12px;margin-top:18px}
-  footer{padding:30px 0;text-align:center;color:rgba(250,247,242,0.6);font-size:14px}
-  @media(max-width:800px){ .hero{flex-direction:column-reverse;padding:18px 0} .hero-right{width:100%} .hero h2{font-size:28px} }
-</style>
+    .service-header {
+      width: 100%;
+      background: #222;
+      color: #d4af37;
+      font-size: 18px;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .service-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 6px;
+    }
+
+    .service-content p {
+      margin: 10px 0;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    .service-images img {
+      width: 120px;
+      border-radius: 6px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    /* PORTFOLIO GRID */
+    #portfolio {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">SS</div>
-        <div>
-          <h1>StoneShine Studio</h1>
-          <p>Premium Jewellery Photo & Reel Editing</p>
+
+  <h1>StoneShine Studio</h1>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <!-- SERVICE 1 -->
+    <div class="service-item">
+      <button class="service-header">Jewellery Photo Editing</button>
+      <div class="service-content">
+        <p>
+          • High-end jewellery retouching<br>
+          • Shine enhancement<br>
+          • Color correction<br>
+          • Dust removal<br>
+          • Polki & diamond clarity boost
+        </p>
+        <div class="service-images">
+          <img src="assets/service1a.jpg">
+          <img src="assets/service1b.jpg">
         </div>
       </div>
-      <div class="cta">
-        <a href="https://wa.me/919352798194" target="_blank" rel="noreferrer">Contact on WhatsApp</a>
-      </div>
-    </header>
+    </div>
 
-    <section class="hero">
-      <div class="hero-left">
-        <h2>Crafting Luxury Visuals for Jewellery Brands</h2>
-        <p>StoneShine Studio specializes in high-end jewellery photo retouching and premium reel editing — Gold, Diamond, Polki and Colour Stone pieces showcased with studio-level finish.</p>
-        <div class="buttons">
-          <a class="cta" href="#portfolio">View Portfolio</a>
-          <a class="btn-secondary" href="#contact">Get Quote</a>
+    <!-- SERVICE 2 -->
+    <div class="service-item">
+      <button class="service-header">Reel Editing</button>
+      <div class="service-content">
+        <p>
+          • Fast trendy reels<br>
+          • Smooth transitions<br>
+          • Viral hook style<br>
+          • Clean text animations
+        </p>
+        <div class="service-images">
+          <img src="assets/reel1.jpg">
+          <img src="assets/reel2.jpg">
         </div>
       </div>
-      <div class="hero-right">
-        <img src="file:///mnt/data/placeholder1.jpg" alt="Hero jewellery" style="max-width:420px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.6);">
-      </div>
-    </section>
-
-    <section id="services">
-<section id="services">
-  <h2 class="section-title">Our Services</h2>
-
-  <div class="service-item">
-    <button class="service-header">Jewellery Photo Editing</button>
-    <div class="service-content">
-      <p>High-end jewellery retouching • Shine enhancement • Color correction • Dust removal • Polki/diamond clarity boost.</p>
-      <div class="service-images">
-        <img src="images/rings.png" alt="">
-        <img src="images/bangles.png" alt="">
-      </div>
     </div>
-  </div>
 
-  <div class="service-item">
-    <button class="service-header">Reel Editing</button>
-    <div class="service-content">
-      <p>Fast, trendy reels • Transitions • Text animations • Viral hook style • Smooth product pans.</p>
-      <div class="service-images">
-        <img src="images/reel1.png" alt="">
-        <img src="images/reel2.png" alt="">
-      </div>
-    </div>
-  </div>
-
-  <div class="service-item">
-    <button class="service-header">Meta Ads & Promo Videos</button>
-    <div class="service-content">
-      <p>High converting jewellery ads • Clean typography • Motion banners • Premium brand feel.</p>
-      <div class="service-images">
-        <img src="images/ad1.png" alt="">
-        <img src="images/ad2.png" alt="">
-      </div>
-    </div>
-  </div>
-
-  <div class="service-item">
-    <button class="service-header">Instagram Content Creation</button>
-    <div class="service-content">
-      <p>Daily posts • Carousel design • Highlight covers • Story templates • Jewellery brand-focused design.</p>
-      <div class="service-images">
-        <img src="images/content1.png" alt="">
-        <img src="images/content2.png" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
-    </section>
-
-    <section id="portfolio">
-      <h2 style="text-align:center;color:var(--muted)">Portfolio</h2>
-      <div class="gallery">
-       <img src="images/rings.png" alt="Rings">
-<img src="images/necklace.png" alt="Necklace">
-<img src="images/earrings.png" alt="Earrings">
-<img src="images/bangles.png" alt="Bangles">
-      </div>
-      <p style="text-align:center;color:rgba(250,247,242,0.7);margin-top:12px">Want these exact edits on your products? <a href="#contact" style="color:var(--gold)">Get a quote</a></p>
-    </section>
-
-    <section class="why">
-      <div class="text">
-        <h2 style="color:var(--muted)">Why Choose StoneShine Studio</h2>
-        <ul style="line-height:1.8;color:rgba(250,247,242,0.85)">
-          <li>Luxury-grade Jewellery Editing</li>
-          <li>Fast Turnaround & Consistent Quality</li>
-          <li>Catalogue & E-commerce Ready Files</li>
-          <li>Client-focused Revisions</li>
-        </ul>
-      </div>
-      <div style="width:320px">
-        <div class="contact">
-          <h3 style="margin:0 0 8px;color:var(--gold)">Get a Quote</h3>
-          <p style="margin:0 0 10px;color:rgba(250,247,242,0.9)">Send sample images or reels on WhatsApp and get a fast estimate.</p>
-          <p style="margin:0 0 8px"><strong>WhatsApp:</strong> <a href="https://wa.me/919352798194" style="color:var(--muted)">+91 93527 98194</a></p>
-          <a href="https://wa.me/919352798194" style="display:inline-block;margin-top:8px;background:var(--gold);color:#071018;padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:700">Message on WhatsApp</a>
+    <!-- SERVICE 3 -->
+    <div class="service-item">
+      <button class="service-header">Meta Ads & Promo Videos</button>
+      <div class="service-content">
+        <p>
+          • High converting jewellery ads<br>
+          • Motion promo videos<br>
+          • Clean typography<br>
+          • Premium brand feel
+        </p>
+        <div class="service-images">
+          <img src="assets/meta1.jpg">
         </div>
       </div>
-    </section>
+    </div>
 
-    <footer>
-      <p>© 2025 StoneShine Studio — Crafted with Precision</p>
-    </footer>
-  </div>
+    <!-- SERVICE 4 -->
+    <div class="service-item">
+      <button class="service-header">Instagram Content Creation</button>
+      <div class="service-content">
+        <p>
+          • Daily posts<br>
+          • Highlight covers<br>
+          • Story templates<br>
+          • Jewellery brand-focused design
+        </p>
+        <div class="service-images">
+          <img src="assets/insta1.jpg">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="grid">
+      <img src="assets/p1.jpg">
+      <img src="assets/p2.jpg">
+      <img src="assets/p3.jpg">
+      <img src="assets/p4.jpg">
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    document.querySelectorAll(".service-header").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+
+        document.querySelectorAll(".service-content").forEach(c => {
+          if (c !== content) c.style.maxHeight = null;
+        });
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
