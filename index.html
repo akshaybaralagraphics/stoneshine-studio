@@ -656,6 +656,20 @@
         .credits {
             color: var(--gold);
             margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .prince-logo {
+            height: 25px;
+            width: auto;
+            vertical-align: middle;
+            margin: 0 5px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
@@ -702,6 +716,11 @@
             
             section {
                 padding: 70px 0;
+            }
+            
+            .credits {
+                flex-direction: column;
+                gap: 5px;
             }
         }
 
@@ -1136,7 +1155,11 @@
             
             <div class="copyright">
                 <p>&copy; 2023 StoneShineStudio. All Rights Reserved.</p>
-                <p class="credits">Powered by Prince APK Art & Akshay Barala</p>
+                <p class="credits">
+                    Powered by 
+                    <img src="images/PRINCEAPK.png" alt="Prince APK Art" class="prince-logo">
+                    Prince APK Art & Akshay Barala
+                </p>
             </div>
         </div>
     </footer>
@@ -1320,6 +1343,17 @@
                     `;
                 });
             });
+            
+            // Prince APK logo error handling
+            const princeLogo = document.querySelector('.prince-logo');
+            if (princeLogo) {
+                princeLogo.addEventListener('error', function() {
+                    console.log('Prince APK logo not found, using text only');
+                    this.style.display = 'none';
+                    // Fallback to text only
+                    document.querySelector('.credits').innerHTML = 'Powered by Prince APK Art & Akshay Barala';
+                });
+            }
         });
     </script>
 </body>
