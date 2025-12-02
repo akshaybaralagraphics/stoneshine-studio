@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StoneShineStudio | Professional Jewelry Editing</title>
+    
+    <!-- ===== OG TAGS & FAVICON ===== -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <meta property="og:title" content="StoneShineStudio | Professional Jewelry Editing">
+    <meta property="og:description" content="Professional jewelry editing, retouching, and video production for diamond, polki, gold jewelry in Jaipur, Rajasthan">
+    <meta property="og:image" content="https://stoneshinestudio.com/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://stoneshinestudio.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://stoneshinestudio.com/images/logo.png">
+    <meta name="description" content="Professional jewelry editing services for diamonds, polki, gold jewelry editing in Jaipur">
+    <!-- ===== END OG TAGS ===== -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ===== RESET & BASE STYLES ===== */
@@ -11,7 +26,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
@@ -32,6 +47,7 @@
             color: var(--text-gray);
             line-height: 1.6;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
         }
 
         .container {
@@ -133,8 +149,7 @@
             color: var(--text-light);
             background: linear-gradient(90deg, var(--gold), var(--light-gold));
             -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            -webkit-text-fill-color: transparent;
             letter-spacing: 1px;
         }
 
@@ -197,6 +212,7 @@
             background-attachment: fixed;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero::before {
@@ -849,7 +865,7 @@
             <div class="gallery">
                 <!-- YOUR ACTUAL IMAGES -->
                 <div class="gallery-item fade-in" data-category="bangles">
-                    <img src="images/bangles.png" alt="Bangles Editing">
+                    <img src="images/bangles.png" alt="Bangles Editing" onerror="this.src='https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     <div class="gallery-overlay">
                         <h3>Bangles Retouching</h3>
                         <p>Gold bangles shine enhancement</p>
@@ -857,7 +873,7 @@
                 </div>
                 
                 <div class="gallery-item fade-in" data-category="earrings">
-                    <img src="images/earrings.png" alt="Earrings Editing">
+                    <img src="images/earrings.png" alt="Earrings Editing" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     <div class="gallery-overlay">
                         <h3>Earrings Editing</h3>
                         <p>Diamond earrings sparkle enhancement</p>
@@ -865,7 +881,7 @@
                 </div>
                 
                 <div class="gallery-item fade-in" data-category="necklaces">
-                    <img src="images/necklace.png" alt="Necklace Editing">
+                    <img src="images/necklace.png" alt="Necklace Editing" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     <div class="gallery-overlay">
                         <h3>Necklace Retouching</h3>
                         <p>Polki necklace color correction</p>
@@ -873,7 +889,7 @@
                 </div>
                 
                 <div class="gallery-item fade-in" data-category="rings">
-                    <img src="images/rings.png" alt="Rings Editing">
+                    <img src="images/rings.png" alt="Rings Editing" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     <div class="gallery-overlay">
                         <h3>Rings Enhancement</h3>
                         <p>Diamond rings professional editing</p>
@@ -1157,7 +1173,7 @@
                 <p>&copy; 2023 StoneShineStudio. All Rights Reserved.</p>
                 <p class="credits">
                     Powered by 
-                    <img src="images/PRINCEAPK.png" alt="Prince APK Art" class="prince-logo">
+                    <img src="images/PRINCEAPK.png" alt="Prince APK Art" class="prince-logo" onerror="this.style.display='none'">
                     Prince APK Art & Akshay Barala
                 </p>
             </div>
@@ -1185,14 +1201,11 @@
         
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
                 button.classList.add('active');
                 
                 const filterValue = button.getAttribute('data-filter');
                 
-                // Filter gallery items
                 galleryItems.forEach(item => {
                     if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                         item.style.display = 'block';
@@ -1241,22 +1254,17 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
             const subject = this.querySelector('input[placeholder="Subject"]').value;
             const message = this.querySelector('textarea').value;
             
-            // Create WhatsApp message
             const whatsappMessage = `Hello StoneShineStudio!%0A%0AName: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}%0A%0AI need jewelry editing services.`;
             
-            // Open WhatsApp with pre-filled message
             window.open(`https://wa.me/919352798194?text=${whatsappMessage}`, '_blank');
             
-            // Reset form
             this.reset();
             
-            // Show success message
             alert('Thank you! Opening WhatsApp to send your message.');
         });
 
@@ -1275,7 +1283,6 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
                     if (window.innerWidth <= 992) {
                         document.querySelector('.nav-links').style.display = 'none';
                     }
@@ -1310,7 +1317,6 @@
             });
         };
         
-        // Set initial state
         fadeElements.forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
@@ -1319,7 +1325,7 @@
         
         window.addEventListener('scroll', fadeInOnScroll);
         window.addEventListener('load', fadeInOnScroll);
-        fadeInOnScroll(); // Initial check
+        fadeInOnScroll();
 
         // Video loading fallback
         document.addEventListener('DOMContentLoaded', function() {
@@ -1327,34 +1333,19 @@
             
             videos.forEach(video => {
                 video.addEventListener('error', function() {
-                    console.log('Video failed to load:', this.querySelector('source').src);
-                    
-                    // Show a play button overlay if video fails
                     const playerDiv = this.parentElement;
                     playerDiv.innerHTML = `
                         <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#1a1a2e; color:#ffd700; border-radius:10px; position:relative;">
                             <i class="fas fa-play-circle" style="font-size:4rem; margin-bottom:15px;"></i>
-                            <p>Click to watch on Instagram</p>
-                            <p style="font-size:0.8rem; color:#ccc; margin-top:10px;">Video preview not available</p>
-                            <div style="position:absolute; bottom:10px; right:10px; background:#25D366; color:white; padding:5px 10px; border-radius:5px; font-size:0.8rem;">
-                                Watch Reel
-                            </div>
+                            <p>Video Preview</p>
+                            <p style="font-size:0.8rem; color:#ccc; margin-top:10px;">Sample reel coming soon</p>
                         </div>
                     `;
                 });
             });
-            
-            // Prince APK logo error handling
-            const princeLogo = document.querySelector('.prince-logo');
-            if (princeLogo) {
-                princeLogo.addEventListener('error', function() {
-                    console.log('Prince APK logo not found, using text only');
-                    this.style.display = 'none';
-                    // Fallback to text only
-                    document.querySelector('.credits').innerHTML = 'Powered by Prince APK Art & Akshay Barala';
-                });
-            }
         });
+        
+        console.log("StoneShineStudio Website Loaded Successfully!");
     </script>
 </body>
 </html>
