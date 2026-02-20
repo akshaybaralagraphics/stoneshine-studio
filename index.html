@@ -167,6 +167,41 @@
     <!-- ===== END SEO SCHEMA ===== -->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ===== CHATBASE CHATBOT WIDGET SCRIPT - FIXED VERSION ===== -->
+    <script>
+    (function(){
+        if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+            window.chatbase=(...arguments)=>{
+                if(!window.chatbase.q){
+                    window.chatbase.q=[]
+                }
+                window.chatbase.q.push(arguments)
+            };
+            window.chatbase=new Proxy(window.chatbase,{
+                get(target,prop){
+                    if(prop==="q"){
+                        return target.q
+                    }
+                    return(...args)=>target(prop,...args)
+                }
+            })
+        }
+        const onLoad=function(){
+            const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="TV61ysawHBr6422om4C1W";
+            script.domain="www.chatbase.co";
+            document.body.appendChild(script);
+        };
+        if(document.readyState==="complete"){
+            onLoad()
+        }else{
+            window.addEventListener("load",onLoad)
+        }
+    })();
+    </script>
+    
     <style>
         /* ===== RESET & BASE STYLES ===== */
         * {
@@ -312,7 +347,6 @@
             letter-spacing: 1.5px;
         }
 
-        /* DESKTOP NAV LINKS */
         .nav-links {
             display: flex;
             gap: 30px;
@@ -347,7 +381,6 @@
             width: 100%;
         }
 
-        /* MOBILE MENU BUTTON */
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
@@ -369,7 +402,6 @@
             background: rgba(212, 175, 55, 0.1);
         }
 
-        /* MOBILE MENU STYLES */
         .mobile-menu {
             display: flex;
             flex-direction: column;
@@ -449,7 +481,6 @@
             background: rgba(212, 175, 55, 0.1);
         }
 
-        /* Body no-scroll when menu is open */
         body.menu-open {
             overflow: hidden;
         }
@@ -861,7 +892,6 @@
             transform: rotateY(180deg);
         }
 
-        /* SIDE-BY-SIDE SOCIAL LINKS ANIMATION */
         .social-links {
             display: flex;
             gap: 15px;
@@ -946,11 +976,11 @@
             transform: translateY(-3px);
         }
 
-        /* ===== UPDATED SMALLER WHATSAPP BUTTON ===== */
+        /* ===== UPDATED WHATSAPP BUTTON - LEFT SIDE ===== */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
-            right: 25px;
+            left: 25px;  /* Moved to left */
             width: 55px;
             height: 55px;
             background: #25D366;
@@ -975,7 +1005,7 @@
 
         .whatsapp-text {
             position: absolute;
-            right: 65px;
+            left: 65px;  /* Changed from right to left */
             background: #25D366;
             color: white;
             padding: 8px 15px;
@@ -985,12 +1015,12 @@
             opacity: 0;
             transition: var(--transition);
             font-size: 0.9rem;
-            animation: slideInRight 0.5s ease-out 0.2s both;
+            animation: slideInLeft 0.5s ease-out 0.2s both;
         }
 
         .whatsapp-float:hover .whatsapp-text {
             opacity: 1;
-            right: 70px;
+            left: 70px;
         }
 
         /* ===== FOOTER ===== */
@@ -1180,17 +1210,17 @@
                 height: 50px;
                 font-size: 1.6rem;
                 bottom: 20px;
-                right: 20px;
+                left: 20px; /* left side */
             }
             
             .whatsapp-text {
                 font-size: 0.8rem;
-                right: 60px;
+                left: 60px;
                 padding: 6px 12px;
             }
             
             .whatsapp-float:hover .whatsapp-text {
-                right: 65px;
+                left: 65px;
             }
         }
 
@@ -1246,7 +1276,7 @@
                 height: 50px;
                 font-size: 1.6rem;
                 bottom: 20px;
-                right: 20px;
+                left: 20px;
             }
         }
 
@@ -1287,7 +1317,7 @@
                 height: 48px;
                 font-size: 1.5rem;
                 bottom: 18px;
-                right: 18px;
+                left: 18px;
             }
             
             .whatsapp-text {
@@ -1353,6 +1383,17 @@
             to {
                 transform: translateY(0);
                 opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
 
@@ -1428,15 +1469,6 @@
             }
         }
 
-        @keyframes pulseNumber {
-            0%, 100% {
-                box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
-            }
-        }
-
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -1470,17 +1502,6 @@
             }
             50% {
                 box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
             }
         }
 
@@ -1526,7 +1547,7 @@
     </style>
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Floating Button (left side) -->
     <a href="https://wa.me/919587693601?text=Hello%20StoneShineStudio!%20I%20need%20jewelry%20editing%20services" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <div class="whatsapp-text">Message Now</div>
@@ -2043,9 +2064,19 @@
         window.addEventListener('load', fadeInOnScroll);
         fadeInOnScroll();
 
-        // Video loading fallback removed since video section is removed
-        
-        console.log("StoneShineStudio Website Loaded Successfully!");
+        // Chatbase identify example (commented out - requires server-side token)
+        // async function identifyUser() {
+        //     // Fetch token from your server endpoint
+        //     const response = await fetch('/api/chatbase-token');
+        //     const { token } = await response.json();
+        //     if (window.chatbase) {
+        //         window.chatbase('identify', { token });
+        //     }
+        // }
+        // // Call when user is signed in
+        // identifyUser();
+
+        console.log("StoneShineStudio Website Loaded Successfully! Chatbot added, WhatsApp moved to left.");
     </script>
 </body>
 </html>
